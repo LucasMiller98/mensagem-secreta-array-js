@@ -1,0 +1,23 @@
+JSON -> variavel global
+localStorage só é uma chave-valor que só grava uma chave e um valor no formato string
+
+JSON.parse(localStorage.getItem('list-secret-message')) -> como os dados do localStorage estão salvos em formato de JSON temos que transformar eles de volta num array usando o JSON.parse. Mas se você executar assim, ele vai dar um erro.Porque não temos informações dentro do localStorage e ele não retornou um array. Para definirmos valores padrões para algumas variáveis, se não conseguirmos retornar valores viaveis, da primeira operação e colocar no final: JSON.parse(localStorage.getItem('list-secret-message')) || [] -> valor padrão.
+
+Para percorrer o array de secretMessage, podemos usar o for of: 
+for(message of secretMessage) {
+    // comandos
+    let position = thingsList.indexOf(things) // pesquisa no array o indice do message e vai retornar a posição
+}
+
+localStorage -> não tem abilidade de gravar vetores, objetos dentro dele. Ele só grava chave e valor no formato string
+
+inputElement.value = `` // Apaga o texto atual do input
+renderSecretMessage() // Para renderizar a lista novamente
+
+var messageText = inputElement.value // Recumperar o valor do input
+
+buttonElement.onclick = addSecretMessage // Para add mais ítens a lista
+
+list.appendChild(thingsElement) // add cada um dos elementos criados
+
+thingsList.splice(pos, 1) // Remove a quantidade, ou seja, a partir da posição pos, remova o 1° que encontar. Por exemplo, se você passar a posição 0 ele vai na posição 0, remover 1 ítem.
